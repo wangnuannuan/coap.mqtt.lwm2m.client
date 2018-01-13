@@ -1,6 +1,6 @@
 
 # coap.mqtt.lwm2m.client
-command line tool writted in python
+command line tool written in python3
 
 #### aiocoap, The Python CoAP library,download the library file,and modifi the code in resource.py
    
