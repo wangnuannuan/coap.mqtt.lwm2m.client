@@ -1,6 +1,7 @@
- 
+
 # coap.mqtt.lwm2m.client
 command line tool writted in python
+
 ####aiocoap, The Python CoAP library,download the library file,and modifi the code in resource.py
    
     return self._resources[request.opt.uri_path], request.copy(uri_path=request.opt.uri_path) line 253
