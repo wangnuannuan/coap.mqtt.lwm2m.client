@@ -56,10 +56,10 @@ def main(args=None):
         if option.register =='yes':
             loop = asyncio.get_event_loop()
             asyncio.ensure_future(client.register())
-        try:
-            loop.run_forever()
-        except KeyboardInterrupt:
-            loop.close()
+            try:
+                loop.run_forever()
+            except KeyboardInterrupt:
+                loop.close()
     except KeyboardInterrupt as e:
         logger.info("User aborted")
         sys.exit(255)
