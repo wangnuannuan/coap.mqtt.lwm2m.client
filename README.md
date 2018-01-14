@@ -1,16 +1,23 @@
 
-# coap.mqtt.lwm2m.client
-command line tool written in python3
+## Introduction
+coap.mqtt.lwm2m.client is a command-line tool for everyday work with coap,mqtt,or lwm2m.
 
-#### aiocoap, The Python CoAP library,download the library file,and modifi the code in resource.py
+ - coap-client: It is a simple command-line tool for interacting with CoAP servers.
+
+## Installation
+
+#### aiocoap, it is the python CoAP library.
+ To install this module,first,download the library file,then modify the file named resource.py
    
     return self._resources[request.opt.uri_path], request.copy(uri_path=request.opt.uri_path) line 253
     return self._resources[request.opt.uri_path], request.copy(uri_path=copy()) the initial code
     
-    finally,run python setup.py install to install the library
+finally,run " python setup.py install " to install the library
     
-#### the lwm2m client,download the library from https://github.com/wangnuannuan/lwm2m-client.git
-    run python setup.py install
+#### the lwm2m-client,it's written according to the aiocoap 
+you can download the library file from https://github.com/wangnuannuan/lwm2m-client.git
+
+     python setup.py install
 
 ## the usage
 coap-client [-h] [--non] [-m METHOD] [--observe] [--observe-exec CMD]
@@ -18,9 +25,9 @@ coap-client [-h] [--non] [-m METHOD] [--observe] [--observe-exec CMD]
                    [--content-format MIME] [-v] [-q] [--dump FILE]
                    [--interactive] [--credentials CREDENTIALS]
 
-- --non, Send request as non-confirmable (NON) message
-- --method, Name or number of request method to use ,the default is "GET"
-- --observe, Register an observation on the resource
+- --non, Send request as non-confirmable (NON) message,Default: False
+- --method, Name or number of request method to use ,Default: “GET”
+- --observe, Register an observation on the resource,Default: False
 - --observe-exec,Run the specified program whenever the observed resource changes, feeding the response data to its stdin
 - --accept, Content format to request
 - --proxy, Relay the CoAP request to a proxy for execution
@@ -36,6 +43,7 @@ coap-client [-h] [--non] [-m METHOD] [--observe] [--observe-exec CMD]
     
 mqtt-client [-h] [-d DEBUG] [-a HOST] [-i ID] [-k KEEPALIVE] [-p PORT]
                    [-u USERNAME] [-P PASSWORD] [-t TOPIC] [--payload] [--qos]
+
 - -d ,if the debug is true,run the mqtt client
 - -a ,host the client to connect 
 - -i,the client id
@@ -53,3 +61,4 @@ lwm2m-client [-n endpointname] [-c createobj] [-s setobjvalue] [-r run/register]
 - -c,if yes ,then create object,for example[/3303/0],if enter n,it will stop create object
 - -s,if yes,then set the object value,for example [/3303/0 5700 0],if enter n,it will stop set object value
 - -r,(yes)run the client
+
