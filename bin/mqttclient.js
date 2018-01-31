@@ -144,7 +144,7 @@ var commands={
 		handler:secure
 	},
 	'protocol':{
-		parameters:['pro'],
+		parameters:[],
 		description:'\tthe protocol to use, mqtt,mqtts, ws or wss',
 		handler:clientpro
 	},

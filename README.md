@@ -36,7 +36,7 @@ command reference
 	discover ['url']
        send a discover request to find resource from 'url'
 
-### MQTT server commandline application
+### MQTT broker commandline application
 This application simulates the use of mqtt broker.
 
 command reference
@@ -72,4 +72,29 @@ command reference
         Publishes a packet on the MQTT broker
     sub ['topic]
         Subscribes to a topic on the MQTT broker
-    
+
+### MQTT client commandline application
+This application simulates the use of mqtt broker.
+
+command reference
+
+	secure ['key']
+		set path of the secure file
+	protocol []
+		set the protocol to mqtts
+	ca ['path']
+		path to the ca certificate
+	addr ['host'] ['port']
+		the broker host and port
+	will ['will-topic']['will-payload']['will-qos']['will-retain']
+    	send a will retained message
+	msg ['topic']['message']
+		set the message topic and body
+	alive ['time']
+		send a ping every XXX seconds
+	user ['username']['password']
+		set the username and password
+	pub ['topic']['message']
+		publish a message
+	sub ['topic']['qos']
+		subscribes a topic
