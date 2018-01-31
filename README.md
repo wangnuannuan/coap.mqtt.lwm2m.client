@@ -13,9 +13,10 @@ This applications can be used to simulate the behavior of one of the peers of th
 
 This application simulates the use of coap server.It just provides command to start the server.
 
-command reference
+ command reference
 
-   start ['port'] ['host']
+	start ['port'] ['host']
+
          Starts a new coap server listening in the 'port'
          
 ### CoAP client commandline application
@@ -24,22 +25,23 @@ This application simulates the use of coap client . It provides commands to get 
 
 command reference
 
-   get ['url']
+	get ['url']
        send a 'get' request and the request path is 'url'
-   observe ['url']
+	observe ['url']
        send a 'get' request to observe the client
-   post ['url'] ['post'] ['value']
+	post ['url'] ['post'] ['value']
        send a post request and the payload is 'value',if the value start with '#',the payload is a json file from the 'value'.
-   put ['url'] ['put'] ['value']
+	put ['url'] ['put'] ['value']
        send a put request and the payload is 'value',if the value start with '#',the payload is a json file from the 'value'.
-   discover ['url']
+	discover ['url']
        send a discover request to find resource from 'url'
 
 ### MQTT server commandline application
 This application simulates the use of mqtt broker.
 
 command reference
-    addr ['host'] ['port']
+    
+	addr ['host'] ['port']
          port and host the server to listen to
     backend ['port'] ['host'] ['prefix']
          set the parent broker's port ,host and the prefix to use
