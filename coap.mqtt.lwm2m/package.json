@@ -1,0 +1,25 @@
+{
+  "name": "coap.mqtt.lwm2m",
+  "version": "1.0.0",
+  "description": "a command-line tool for everyday work with coap,mqtt,or lwm2m",
+  "main":"index.js",
+  "bin": {
+    "scoap": "bin/coapserver.js",
+    "ccoap": "bin/coapclient.js",
+    "smqtt": "bin/mqttserver",
+    "cmqtt":"bin/mqttclient",
+    "slwm2m":"bin/lwm2mserver",
+    "clwm2m":"bin/lwm2mclient"
+
+  },
+    "dependencies": {
+    "coap": "0.17.0",
+    "command-node": "0.1.1",
+    "mosca":"2.7.0",
+    "mqtt":"2.15.1",
+    "lwm2m-node-lib":"1.0.0"
+
+  },
+  "author": "wangnuannuan",
+  "license": "ISC"
+}
