@@ -30,6 +30,8 @@ var config = require('./config'),
     globalDeviceInfo,
     separator = '\n\n\t';
 
+var client_config = {client: config.lwm2mclient};
+
 function printObject(result) {
     var resourceIds = Object.keys(result.attributes);
     console.log('\nObject:\n--------------------------------\nObjectType: %s\nObjectId: %s\nObjectUri: %s',
@@ -233,7 +235,7 @@ var commands = {
     'config': {
         parameters: [],
         description: '\tPrint the current config.',
-        handler: clUtils.showConfig(config.lwm2mclient, 'client')
+        handler: clUtils.showConfig(client_config, 'client')
     },
     'quit': {
         parameters: [],
@@ -242,6 +244,6 @@ var commands = {
     }
 };
 
-lwm2mClient.init(require('./config'));
+lwm2mClient.init(client_config);
 
 clUtils.initialize(commands, 'LWM2M-Client> ');
